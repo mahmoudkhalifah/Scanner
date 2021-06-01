@@ -6,7 +6,10 @@
 	{
 		private const string Arthmetic = "+-/*";
 		private const string Digits = "0123456789.";
+		private const string IdentifierChars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_";
+		private readonly string[] DataTypes = {"ity", "Sity", "Cwq"};
 		private const char EndOfLine = '^';
+		private const char TokenDelimiter = '#';
 		private const string WhiteSpaces = " \t\n";
 		private string _text;
 		private int _postion;
@@ -69,6 +72,26 @@
 			}
 			return false;
 		}
+		//checks is the current char is arthmetic operator
+		private bool IsDataType(string word)
+		{
+			foreach (string dt in DataTypes)
+			{
+				if (word == dt)
+					return true;
+			}
+			return false;
+		}
+		//checks is the current char is arthmetic operator
+		private bool IsIdentifier(string word)
+		{
+			foreach (char char_ in IdentifierChars)
+			{
+				if (word[0] == char_)
+					return true;
+			}
+			return false;
+		}
 		//checks is the current char is whitespace
 		private bool IsWhitspace()
 		{
@@ -79,6 +102,24 @@
 			}
 			return false;
 		}
+		//checks is the current char is charcter
+		private bool IsCharacter()
+		{
+			foreach (char char_ in IdentifierChars)
+			{
+				if (Current == char_)
+					return true;
+			}
+			return false;
+		}
+		//checks is the current char is charcter
+		private bool IsTokenDelmiter()
+		{
+			if (Current == TokenDelimiter)
+				return true;
+			return false;
+		}
+
 		//returns substring from the original string from start to end-1 (end not included)
 		private string SubString(int start, int end)
 		{
@@ -101,7 +142,7 @@
 				if (IsEndOfLine())                              //check if current is ^
 				{
 					IncreaseLexemeNo();
-					System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " ENDOFLINE");
+					//System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " ENDOFLINE");
 					IncreaseLineNo();                           //increase line because the first line has ended
 					ResetLexemeNo();                            //count lexems from the begining again for the new line
 					Next();                                     //increase the postion for the next iterate
@@ -117,15 +158,36 @@
 					System.Diagnostics.Debug.WriteLine(Digit + " " + _lineNo + " " + _lexemeNo + " DIGIT");
 				}
 
-				else if (IsWhitspace())                         //check if current is whitespace
+				else if (IsCharacter())											//check if current is digit
+				{
+					start = _postion;
+					while (IsCharacter() || IsDigit())                           //while the new charcter is still digit
+						Next();
+					IncreaseLexemeNo();
+					string word = SubString(start, _postion);               //store the whole number
+					if (IsDataType(word))
+						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " DATATYPE");
+					else if (IsIdentifier(word))
+						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " IDENTIFIER");
+					else System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " ERROR");
+				}
+				//#######TWO LISTS NEEDED#######
+
+				else if (IsTokenDelmiter())
+				{
+					IncreaseLexemeNo();
+					System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " TOKENDELMITER");
+					Next();
+				}
+
+				else if (IsWhitspace())									//check if current is whitespace
 				{
 					start = _postion;
 					while (IsWhitspace())
 						Next();
 					string whitespace = SubString(start, _postion);
 					IncreaseLexemeNo();
-					System.Diagnostics.Debug.WriteLine(whitespace + " " + _lineNo + " " + _lexemeNo + " WHITESPACE");
-
+					//System.Diagnostics.Debug.WriteLine(whitespace + " " + _lineNo + " " + _lexemeNo + " WHITESPACE");
 				}
 
 				else if (IsArthmetic())                         //check if current is arthmetic operator

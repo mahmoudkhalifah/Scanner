@@ -13,6 +13,7 @@ namespace Scanner
 {
     public partial class Form1 : Form
     {
+        Lexer lexer = new Lexer();
         OpenFileDialog ofd = new OpenFileDialog
         {
             Filter="txt files (*.txt)|*.txt",
@@ -28,7 +29,9 @@ namespace Scanner
         private void compileBtn_Click(object sender, EventArgs e)
         {
             code = codeBox.Text;
+            lexer.SetText(code);
             System.Diagnostics.Debug.WriteLine(code);
+            lexer.Tokinize();
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
@@ -39,6 +42,8 @@ namespace Scanner
                 code = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(code);
                 sr.Close();
+                lexer.SetText(code);
+                lexer.Tokinize();
             }
         }
 

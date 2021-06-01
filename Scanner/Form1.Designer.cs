@@ -31,9 +31,7 @@ namespace Scanner
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.codeBox = new System.Windows.Forms.RichTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.compileBtn = new System.Windows.Forms.Button();
             this.browseBtn = new System.Windows.Forms.Button();
             this.newBtn = new System.Windows.Forms.Button();
@@ -49,12 +47,6 @@ namespace Scanner
             this.codeBox.Size = new System.Drawing.Size(811, 522);
             this.codeBox.TabIndex = 0;
             this.codeBox.Text = "";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // compileBtn
             // 
@@ -116,7 +108,6 @@ namespace Scanner
         #endregion
 
         private System.Windows.Forms.RichTextBox codeBox;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button compileBtn;
         private System.Windows.Forms.Button browseBtn;
         private System.Windows.Forms.Button newBtn;

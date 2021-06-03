@@ -31,28 +31,24 @@ namespace Scanner
         /// </summary>
         private void InitializeComponent()
         {
-            this.codeBox = new System.Windows.Forms.RichTextBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.compileBtn = new System.Windows.Forms.Button();
             this.browseBtn = new System.Windows.Forms.Button();
             this.newBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.fastColoredTextBox1 = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // codeBox
-            // 
-            this.codeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(36)))));
-            this.codeBox.ForeColor = System.Drawing.Color.White;
-            this.codeBox.Location = new System.Drawing.Point(12, 12);
-            this.codeBox.Name = "codeBox";
-            this.codeBox.Size = new System.Drawing.Size(811, 522);
-            this.codeBox.TabIndex = 0;
-            this.codeBox.Text = "";
             // 
             // compileBtn
             // 
-            this.compileBtn.Location = new System.Drawing.Point(866, 68);
+            this.compileBtn.Location = new System.Drawing.Point(758, 51);
+            this.compileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.compileBtn.Name = "compileBtn";
-            this.compileBtn.Size = new System.Drawing.Size(94, 29);
+            this.compileBtn.Size = new System.Drawing.Size(82, 22);
             this.compileBtn.TabIndex = 1;
             this.compileBtn.Text = "Compile";
             this.compileBtn.UseVisualStyleBackColor = true;
@@ -60,9 +56,10 @@ namespace Scanner
             // 
             // browseBtn
             // 
-            this.browseBtn.Location = new System.Drawing.Point(866, 113);
+            this.browseBtn.Location = new System.Drawing.Point(758, 85);
+            this.browseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.browseBtn.Name = "browseBtn";
-            this.browseBtn.Size = new System.Drawing.Size(94, 29);
+            this.browseBtn.Size = new System.Drawing.Size(82, 22);
             this.browseBtn.TabIndex = 2;
             this.browseBtn.Text = "Browse";
             this.browseBtn.UseVisualStyleBackColor = true;
@@ -70,9 +67,10 @@ namespace Scanner
             // 
             // newBtn
             // 
-            this.newBtn.Location = new System.Drawing.Point(866, 23);
+            this.newBtn.Location = new System.Drawing.Point(758, 17);
+            this.newBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newBtn.Name = "newBtn";
-            this.newBtn.Size = new System.Drawing.Size(94, 29);
+            this.newBtn.Size = new System.Drawing.Size(82, 22);
             this.newBtn.TabIndex = 3;
             this.newBtn.Text = "New";
             this.newBtn.UseVisualStyleBackColor = true;
@@ -80,38 +78,107 @@ namespace Scanner
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(866, 160);
+            this.saveBtn.Location = new System.Drawing.Point(758, 120);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(94, 29);
+            this.saveBtn.Size = new System.Drawing.Size(82, 22);
             this.saveBtn.TabIndex = 4;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
+            // fastColoredTextBox1
+            // 
+            this.fastColoredTextBox1.AutoCompleteBracketsList = new char[] {
+        '(',
+        ')',
+        '{',
+        '}',
+        '[',
+        ']',
+        '\"',
+        '\"',
+        '\'',
+        '\''};
+            this.autocompleteMenu1.SetAutocompleteMenu(this.fastColoredTextBox1, this.autocompleteMenu1);
+            this.fastColoredTextBox1.AutoIndentCharsPatterns = "^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:]*" +
+    "(?<range>:)\\s*(?<range>[^;]+);";
+            this.fastColoredTextBox1.AutoScrollMinSize = new System.Drawing.Size(27, 14);
+            this.fastColoredTextBox1.BackBrush = null;
+            this.fastColoredTextBox1.CharHeight = 14;
+            this.fastColoredTextBox1.CharWidth = 8;
+            this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.IsReplaceMode = false;
+            this.fastColoredTextBox1.Location = new System.Drawing.Point(12, 7);
+            this.fastColoredTextBox1.Name = "fastColoredTextBox1";
+            this.fastColoredTextBox1.Paddings = new System.Windows.Forms.Padding(0);
+            this.fastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.fastColoredTextBox1.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("fastColoredTextBox1.ServiceColors")));
+            this.fastColoredTextBox1.Size = new System.Drawing.Size(703, 366);
+            this.fastColoredTextBox1.TabIndex = 5;
+            this.fastColoredTextBox1.Zoom = 100;
+            this.fastColoredTextBox1.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.fastColoredTextBox1_TextChanged);
+            // 
+            // autocompleteMenu1
+            // 
+            this.autocompleteMenu1.Colors = ((AutocompleteMenuNS.Colors)(resources.GetObject("autocompleteMenu1.Colors")));
+            this.autocompleteMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autocompleteMenu1.ImageList = this.imageList1;
+            this.autocompleteMenu1.Items = new string[] {
+        "Pattern",
+        "DerivedFrom",
+        "TrueFor-Else",
+        "Ity",
+        "Sity",
+        "Cwq",
+        "CwqSequence",
+        "Ifity",
+        "Sifity",
+        "Valueless",
+        "Logical",
+        "BreakFromThis",
+        "Whatever",
+        "Respondwith",
+        "Srap",
+        "Scan-Conditionof",
+        "Require"};
+            this.autocompleteMenu1.TargetControlWrapper = null;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(998, 546);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(873, 410);
+            this.Controls.Add(this.fastColoredTextBox1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.newBtn);
             this.Controls.Add(this.browseBtn);
             this.Controls.Add(this.compileBtn);
-            this.Controls.Add(this.codeBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Notepad";
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox codeBox;
         private System.Windows.Forms.Button compileBtn;
         private System.Windows.Forms.Button browseBtn;
         private System.Windows.Forms.Button newBtn;
         private System.Windows.Forms.Button saveBtn;
+        private FastColoredTextBoxNS.FastColoredTextBox fastColoredTextBox1;
+        private AutocompleteMenuNS.AutocompleteMenu autocompleteMenu1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

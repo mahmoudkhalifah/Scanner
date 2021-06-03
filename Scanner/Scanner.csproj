@@ -6,4 +6,10 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoCompleteMenu-ScintillaNET" Version="1.6.2" />
+    <PackageReference Include="FastColoredTextBox.Net5" Version="2.16.26" />
+    <PackageReference Include="SyntaxHighlighter.NuGet" Version="3.0.83.1" />
+  </ItemGroup>
+
 </Project>

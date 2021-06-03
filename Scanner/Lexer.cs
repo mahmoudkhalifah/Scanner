@@ -1,14 +1,23 @@
 ﻿namespace Scanner
 {
 	using System;
-
+	//check for keywords and its tokens
+	//check for identifiers
+	//check for error in identifier naming
+	//check for comments
 	public class Lexer
 	{
-		private const string Arthmetic = "+-/*";
 		private const string Digits = "0123456789.";
 		private const string IdentifierChars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_";
-		private readonly string[] DataTypes = {"ity", "Sity", "Cwq"};
-		private const char EndOfLine = '^';
+		private readonly string[] Keywords = { "Pattern", "DerivedFrom", "TrueFor", "Else", "Ity", "Sity",
+			"Cwq", "CwqSequence","Ifity","Sifity","Valueless","Logical", "BreakFromThis","Whatever", "Respondwith", "Srap", "Scan", "Conditionof","Require" };
+		private readonly string[] ReturnTokens = { "Class", "Inheritance", "Condition", "Condition", "Integer", "SInteger",
+			"Character","String","float","SFloat","Void","Boolean","Break","Loop","Return","Struct","Switch","Inclusion"};
+		private readonly string[] Symbols = { "@", "$", "\"'","{}[]()","#","^","&&","||","~","=","->","==","<>","!=","<=",">=","--","/-","-/", "+-*/" };
+		private readonly string[] ReturnTokensForSymbols = { "Start Symbol","End Symbol", "Quotation Mark", "Braces", "Token Delimiter",
+			"Line Delimiter", "Logic Operator", "Logic Operator", "Logic Operator",
+			"Assignment Operator", "Access Operator","Relational Operators","Relational Operators","Relational Operators",
+			"Relational Operators","Relational Operators","Comment","Comment","Comment","Arithmetic Operator"};
 		private const char TokenDelimiter = '#';
 		private const string WhiteSpaces = " \t\n";
 		private string _text;
@@ -36,22 +45,13 @@
 			_text = text;
 		}
 		//increase postion that our current char points to
-		private void Next() {
-			_postion++;
-		}
+		private void Next() { _postion++; }
 		//increase line number
 		private void IncreaseLineNo() { _lineNo++; }
 		//increase lexme number
 		private void IncreaseLexemeNo() { _lexemeNo++; }
 		//reset lexeme number
 		private void ResetLexemeNo() { _lexemeNo = 0; }
-		//checks is the cureent char is ^
-		private bool IsEndOfLine()
-		{
-			if (Current == EndOfLine)
-				return true;
-			return false;
-		}
 		//checks is the current char is digit
 		private bool IsDigit()
 		{
@@ -62,24 +62,40 @@
 			}
 			return false;
 		}
-		//checks is the current char is arthmetic operator
-		private bool IsArthmetic()
+
+		private string IsSymbol(string symbol)
 		{
-			foreach (char arth in Arthmetic)
+			for (int i = 0; i < Symbols.Length; i++)
 			{
-				if (Current == arth)
-					return true;
+				if (symbol == Symbols[i])
+					return ReturnTokensForSymbols[i];
+				if(symbol.Length == 1)
+                {
+					foreach (char _symbol in Symbols[i])	
+					{
+						if (symbol[0] == _symbol)
+							return ReturnTokensForSymbols[i];
+					}
+				}
+				
 			}
-			return false;
+			return "NOT FOUND";
 		}
 		//checks is the current char is arthmetic operator
-		private bool IsDataType(string word)
+		private string IsKeyword(string word)
 		{
-			foreach (string dt in DataTypes)
+			for (int i=0; i< Keywords.Length;i++)
 			{
-				if (word == dt)
-					return true;
+				if (word == Keywords[i])
+					return ReturnTokens[i];
 			}
+			return "NOT FOUND";
+		}
+		//checks is the current char is arthmetic operator
+		private bool IsEndOfFile()
+		{
+			if (Current == '\0')
+				return true;
 			return false;
 		}
 		//checks is the current char is arthmetic operator
@@ -137,67 +153,86 @@
 			_lineNo = 1;									
 			_lexemeNo = 0;
 			int start;
-			while (_postion<_text.Length)						//while we still in text boundries
+			while (_postion<_text.Length && !IsEndOfFile())						//while we still in text boundries
             {
-				if (IsEndOfLine())                              //check if current is ^
+
+				if (IsCharacter())                                         //check if current is digit
 				{
+					start = _postion;
+					while (IsCharacter() || IsDigit() && !IsEndOfFile())                           //while the new charcter is still digit
+						Next();
 					IncreaseLexemeNo();
-					//System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " ENDOFLINE");
-					IncreaseLineNo();                           //increase line because the first line has ended
-					ResetLexemeNo();                            //count lexems from the begining again for the new line
-					Next();                                     //increase the postion for the next iterate
+					string word = SubString(start, _postion);               //store the whole number
+					if (IsKeyword(word) != "NOT FOUND")                       //////////////
+						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + IsKeyword(word));
+					else if (IsIdentifier(word))
+						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " Identifier");
+					else System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " ERROR");
 				}
 
 				else if (IsDigit())                             //check if current is digit
 				{
 					start = _postion;
-					while (IsDigit())                           //while the new charcter is still digit
+					while (IsDigit() && !IsEndOfFile())                           //while the new charcter is still digit
 						Next();
 					string Digit = SubString(start, _postion);  //store the whole number
 					IncreaseLexemeNo();
 					System.Diagnostics.Debug.WriteLine(Digit + " " + _lineNo + " " + _lexemeNo + " DIGIT");
 				}
 
-				else if (IsCharacter())											//check if current is digit
+				else if (IsWhitspace())                                 //check if current is whitespace
+				{
+					while (IsWhitspace() && !IsEndOfFile())
+					{
+						if (Current == '\n')
+						{
+							IncreaseLineNo();
+							ResetLexemeNo();
+						}
+						Next();
+					}
+
+				}
+
+				else if (!IsCharacter() && !IsDigit() && !IsWhitspace())
 				{
 					start = _postion;
-					while (IsCharacter() || IsDigit())                           //while the new charcter is still digit
-						Next();
-					IncreaseLexemeNo();
-					string word = SubString(start, _postion);               //store the whole number
-					if (IsDataType(word))
-						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " DATATYPE");
-					else if (IsIdentifier(word))
-						System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " IDENTIFIER");
-					else System.Diagnostics.Debug.WriteLine(word + " " + _lineNo + " " + _lexemeNo + " ERROR");
-				}
-				//#######TWO LISTS NEEDED#######
-
-				else if (IsTokenDelmiter())
-				{
-					IncreaseLexemeNo();
-					System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " TOKENDELMITER");
 					Next();
-				}
-
-				else if (IsWhitspace())									//check if current is whitespace
-				{
-					start = _postion;
-					while (IsWhitspace())
+					while (!IsCharacter() && !IsDigit() && !IsWhitspace() && !IsEndOfFile())
 						Next();
-					string whitespace = SubString(start, _postion);
-					IncreaseLexemeNo();
-					//System.Diagnostics.Debug.WriteLine(whitespace + " " + _lineNo + " " + _lexemeNo + " WHITESPACE");
-				}
 
-				else if (IsArthmetic())                         //check if current is arthmetic operator
-				{
-					char arthmetic = Current;                   //store the arthmetic operator
-					IncreaseLexemeNo();
-					System.Diagnostics.Debug.WriteLine(Current + " " + _lineNo + " " + _lexemeNo + " ARTHMETIC");
-					Next();                                     //increase the postion for the next iterate
-				}
-				else Next();									//if the input is not all the above just increase postion to avoid infinite loop
+					string other = SubString(start, _postion);
+					if (IsSymbol(other) != "NOT FOUND")
+					{
+						IncreaseLexemeNo();
+						System.Diagnostics.Debug.WriteLine(other + " " + _lineNo + " " + _lexemeNo + IsSymbol(other));
+						if (IsSymbol(other) == "Comment")
+                        {
+
+                            if (other == "--")
+                            {
+								while (Current != '\n' && !IsEndOfFile())
+									Next();
+                            }
+                            else if (other == "/-")
+                            {
+								while (Current != '-' && !IsEndOfFile())
+									Next();
+							}
+                        }
+						else if (IsSymbol(other) == "Quotation Mark")
+                        {
+							if(other == "'")
+                            {
+								while (Current != '\'' && !IsEndOfFile())
+									Next();
+							}
+							else while (Current != '\"' && !IsEndOfFile())
+									Next();
+						}
+					}
+				}                                   //if the input is not all the above just increase postion to avoid infinite loop
+				else Next();
 			}
 		}
 	}

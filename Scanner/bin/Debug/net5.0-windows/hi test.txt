@@ -1,0 +1,4 @@
+Require "1.txt"
+@
+ity#2hello=5^
+$

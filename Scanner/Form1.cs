@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dictionary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Scanner
 {
     public partial class Form1 : Form
     {
+        public static int size;
+        public static string[] lineNo2 = new string[1000];
+        public static string[] lexeme2 = new string[1000];
+        public static string[] ReturnToken2 = new string[1000];
+        public static string[] lexemeNoInLine2 = new string[1000];
+        public static string[] matchability2 = new string[1000];
         Lexer lexer = new Lexer();
         OpenFileDialog ofd = new OpenFileDialog
         {
@@ -31,9 +38,16 @@ namespace Scanner
         private void compileBtn_Click(object sender, EventArgs e)
         {
             code = fastColoredTextBox1.Text;
-            lexer.SetText(code);
-            System.Diagnostics.Debug.WriteLine(code);
-            lexer.Tokinize();
+            Dictionary_ table = new Dictionary_();
+            lexer.Tokinize(code, table);
+            size = table.length();
+            lineNo2 = table.get("lineNo");
+            lexeme2 = table.get("lexeme");
+            ReturnToken2 = table.get("ReturnToken");
+            lexemeNoInLine2 = table.get("lexemeNoInLine");
+            matchability2 = table.get("matchability");
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
@@ -44,8 +58,16 @@ namespace Scanner
                 code = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(code);
                 sr.Close();
-                lexer.SetText(code);
-                lexer.Tokinize();
+                Dictionary_ table = new Dictionary_();
+                lexer.Tokinize(code, table);
+                size = table.length();
+                lineNo2 = table.get("lineNo");
+                lexeme2 = table.get("lexeme");
+                ReturnToken2 = table.get("ReturnToken");
+                lexemeNoInLine2 = table.get("lexemeNoInLine");
+                matchability2 = table.get("matchability");
+                Form2 f2 = new Form2();
+                f2.ShowDialog();
             }
         }
 
@@ -78,15 +100,19 @@ namespace Scanner
 
         private void fastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
         {
-            Regex rx = new Regex("class");
-            int index = fastColoredTextBox1.SelectionStart;
+            //Regex rx = new Regex("class");
+            //int index = fastColoredTextBox1.SelectionStart;
 
-            foreach (Match m in rx.Matches(fastColoredTextBox1.Text))
-            {
-                fastColoredTextBox1.SelectionColor = Color.Blue;
-                fastColoredTextBox1.SelectionStart = index;
-                fastColoredTextBox1.SelectionColor = Color.Black;
-            }
+            //foreach (Match m in rx.Matches(fastColoredTextBox1.Text))
+            //{
+
+            //    fastColoredTextBox1.SelectionColor = Color.Blue;
+            //    fastColoredTextBox1.SelectionStart = index;
+            //    fastColoredTextBox1.SelectionColor = Color.Black;
+            //}
+
+     
+
         }
     }
 }

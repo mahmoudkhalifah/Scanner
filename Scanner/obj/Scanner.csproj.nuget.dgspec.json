@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj": {}
+  },
+  "projects": {
+    "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj",
+        "projectName": "Scanner",
+        "projectPath": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
+        "outputPath": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.org": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "AutoCompleteMenu-ScintillaNET": {
+              "target": "Package",
+              "version": "[1.6.2, )"
+            },
+            "FastColoredTextBox.Net5": {
+              "target": "Package",
+              "version": "[2.16.26, )"
+            },
+            "SyntaxHighlighter.NuGet": {
+              "target": "Package",
+              "version": "[3.0.83.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

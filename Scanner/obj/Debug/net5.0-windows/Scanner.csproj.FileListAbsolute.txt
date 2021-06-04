@@ -1,0 +1,45 @@
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.exe
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.deps.json
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.runtimeconfig.json
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.runtimeconfig.dev.json
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\ref\Scanner.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.pdb
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\AutocompleteMenu-ScintillaNET.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\FastColoredTextBox.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\bin\Debug\net5.0-windows\ScintillaNET.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.Form1.resources
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.AssemblyInfo.cs
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.CopyComplete
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\ref\Scanner.dll
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.pdb
+C:\Users\HP\Desktop\New folder (4)\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.genruntimeconfig.cache
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.exe
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.deps.json
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.runtimeconfig.json
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.runtimeconfig.dev.json
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\ref\Scanner.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\Scanner.pdb
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\AutocompleteMenu-ScintillaNET.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\FastColoredTextBox.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\bin\Debug\net5.0-windows\ScintillaNET.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csprojAssemblyReference.cache
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.Form1.resources
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.Form2.resources
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.GenerateResource.cache
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.GeneratedMSBuildEditorConfig.editorconfig
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.AssemblyInfoInputs.cache
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.AssemblyInfo.cs
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.CoreCompileInputs.cache
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.csproj.CopyComplete
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\ref\Scanner.dll
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.pdb
+D:\fcaih - 3 2nd term\compilers\Scanner\Scanner\Scanner\obj\Debug\net5.0-windows\Scanner.genruntimeconfig.cache

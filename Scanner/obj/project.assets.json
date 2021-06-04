@@ -1,0 +1,247 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "AutoCompleteMenu-ScintillaNET/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "jacobslusser.ScintillaNET": "3.6.3"
+        },
+        "compile": {
+          "lib/net461/AutocompleteMenu-ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net461/AutocompleteMenu-ScintillaNET.dll": {}
+        }
+      },
+      "FastColoredTextBox.Net5/2.16.26": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/FastColoredTextBox.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/FastColoredTextBox.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "jacobslusser.ScintillaNET/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.dll": {}
+        }
+      },
+      "SyntaxHighlighter.NuGet/3.0.83.1": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "AutoCompleteMenu-ScintillaNET/1.6.2": {
+      "sha512": "bCGtFKqaMvj2Sma3Kr09N8NhLVxICOJxiBuG55/GDhSffP8WAtWi5D4IGFldcQfK7IcbuXsjN1/Mjy3ImjYStQ==",
+      "type": "package",
+      "path": "autocompletemenu-scintillanet/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autocompletemenu-scintillanet.1.6.2.nupkg.sha512",
+        "autocompletemenu-scintillanet.nuspec",
+        "lib/net461/AutocompleteMenu-ScintillaNET.dll"
+      ]
+    },
+    "FastColoredTextBox.Net5/2.16.26": {
+      "sha512": "tpeFJ0cNgO6RmEAl6M3A8wAXdycmqMk6rdZMe/DHNkQ4Yh5kgPHa8AdWp1SCxoswKm3QdQkDM7TW8mgraYjjxA==",
+      "type": "package",
+      "path": "fastcoloredtextbox.net5/2.16.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fastcoloredtextbox.net5.2.16.26.nupkg.sha512",
+        "fastcoloredtextbox.net5.nuspec",
+        "lib/net5.0-windows7.0/FastColoredTextBox.dll"
+      ]
+    },
+    "jacobslusser.ScintillaNET/3.6.3": {
+      "sha512": "lERpP3K4x1ge5sW5eG+Yhv9sEFF4MDiHd/nuXTu/xSgPGODQo7K8hCEivqulrFypzFPZ+TsLDZoqucmi5blbdg==",
+      "type": "package",
+      "path": "jacobslusser.scintillanet/3.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jacobslusser.scintillanet.3.6.3.nupkg.sha512",
+        "jacobslusser.scintillanet.nuspec",
+        "lib/net40/ScintillaNET.dll",
+        "lib/net40/ScintillaNET.xml"
+      ]
+    },
+    "SyntaxHighlighter.NuGet/3.0.83.1": {
+      "sha512": "ddUtcsnf3ChZ34CAYlF6WzwhNTrvgAFy45L8PTXJj2VW4xRqRITjb0MXoHRe4g55splkXm1ERxwHpLo/6NVvIw==",
+      "type": "package",
+      "path": "syntaxhighlighter.nuget/3.0.83.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/SyntaxHighlighter/scripts/shAutoloader.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushAS3.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushAppleScript.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushBash.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushCSharp.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushColdFusion.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushCpp.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushCss.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushDelphi.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushDiff.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushErlang.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushGroovy.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushJava.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushJavaFX.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushPerl.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushPhp.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushPlain.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushPowerShell.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushPython.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushRuby.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushSass.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushScala.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushSql.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushVb.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shBrushXml.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shCore.js",
+        "content/Scripts/SyntaxHighlighter/scripts/shLegacy.js",
+        "content/Scripts/SyntaxHighlighter/styles/shCore.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreDefault.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreDjango.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreEclipse.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreEmacs.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreFadeToGrey.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreMDUltra.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreMidnight.css",
+        "content/Scripts/SyntaxHighlighter/styles/shCoreRDark.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeDefault.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeDjango.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeEclipse.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeEmacs.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeFadeToGrey.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeMDUltra.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeMidnight.css",
+        "content/Scripts/SyntaxHighlighter/styles/shThemeRDark.css",
+        "syntaxhighlighter.nuget.3.0.83.1.nupkg.sha512",
+        "syntaxhighlighter.nuget.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "AutoCompleteMenu-ScintillaNET >= 1.6.2",
+      "FastColoredTextBox.Net5 >= 2.16.26",
+      "SyntaxHighlighter.NuGet >= 3.0.83.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Mahmoud\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj",
+      "projectName": "Scanner",
+      "projectPath": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\Scanner.csproj",
+      "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
+      "outputPath": "D:\\fcaih - 3 2nd term\\compilers\\Scanner\\Scanner\\Scanner\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.org": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "AutoCompleteMenu-ScintillaNET": {
+            "target": "Package",
+            "version": "[1.6.2, )"
+          },
+          "FastColoredTextBox.Net5": {
+            "target": "Package",
+            "version": "[2.16.26, )"
+          },
+          "SyntaxHighlighter.NuGet": {
+            "target": "Package",
+            "version": "[3.0.83.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AutoCompleteMenu-ScintillaNET 1.6.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AutoCompleteMenu-ScintillaNET",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'jacobslusser.ScintillaNET 3.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "jacobslusser.ScintillaNET",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}

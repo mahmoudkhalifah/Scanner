@@ -103,8 +103,12 @@
 		{
 			foreach (char char_ in Chars)
 			{
-				if (word[0] == char_)
-					return true;
+				try
+				{
+					if (word[0] == char_)
+						return true;
+				}
+				catch { }
 			}
 			return false;
 		}
@@ -271,13 +275,7 @@
 					other += Current;
 
 					while (!IsCharacter() && !IsDigit() && !IsWhitspace() && !IsEndOfFile())
-					{
-						if (other != Current + "" && Current != '=')
-						{
-							break;
-						}
 						Next();
-					}
 
 					other = SubString(start, _postion);
 					if (IsSymbol(other) != "NOT FOUND")
@@ -309,6 +307,17 @@
 									Next();
 						}
 					}
+					else
+                    {
+						foreach (char c in other)
+						{
+							if (IsSymbol(c+"") != "NOT FOUND")
+							{
+								IncreaseLexemeNo();
+								addLexeme(_lineNo, c+"", IsSymbol(c+""), _lexemeNo, "matched");
+							}
+						}
+                    }
 				}                                   //if the input is not all the above just increase postion to avoid infinite loop
 				else Next();
 			}

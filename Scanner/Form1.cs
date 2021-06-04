@@ -1,4 +1,5 @@
 ﻿using dictionary;
+using FastColoredTextBoxNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,14 @@ namespace Scanner
             matchability2 = table.get("matchability");
             Form2 f2 = new Form2();
             f2.ShowDialog();
+            for (int i = 0; i < lineNo2.Length; i++)
+            {
+                if (ReturnToken2[i] == "Error")
+                {
+                    int x = int.Parse(lineNo2[i]);
+                    System.Diagnostics.Debug.WriteLine(fastColoredTextBox1.GetLineText(x-1));
+                }
+            }
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
@@ -82,9 +91,9 @@ namespace Scanner
             sfd.Filter = "txt files (*.txt)|*.txt";
             if (sfd.ShowDialog()==DialogResult.OK)
             {
-                StreamWriter sr = new StreamWriter(sfd.FileName);
-                sr.Write(fastColoredTextBox1.Text);
-                sr.Close();
+                StreamWriter sw = new StreamWriter(sfd.FileName);
+                sw.Write(fastColoredTextBox1.Text);
+                sw.Close();
             }
         }
 
@@ -100,19 +109,15 @@ namespace Scanner
 
         private void fastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
         {
-            //Regex rx = new Regex("class");
-            //int index = fastColoredTextBox1.SelectionStart;
-
-            //foreach (Match m in rx.Matches(fastColoredTextBox1.Text))
-            //{
-
-            //    fastColoredTextBox1.SelectionColor = Color.Blue;
-            //    fastColoredTextBox1.SelectionStart = index;
-            //    fastColoredTextBox1.SelectionColor = Color.Black;
-            //}
-
      
 
+        }
+
+        private void commentBtm_Click(object sender, EventArgs e)
+        {
+            if (fastColoredTextBox1.SelectedText.StartsWith("--"))
+                fastColoredTextBox1.SelectedText = fastColoredTextBox1.SelectedText.Substring(2);
+            else fastColoredTextBox1.SelectedText = "--" + fastColoredTextBox1.SelectedText;
         }
     }
 }

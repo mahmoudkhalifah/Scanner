@@ -42,14 +42,13 @@ namespace Scanner
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.commentBtm = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // compileBtn
             // 
-            this.compileBtn.Location = new System.Drawing.Point(866, 68);
+            this.compileBtn.Location = new System.Drawing.Point(1664, 66);
             this.compileBtn.Name = "compileBtn";
             this.compileBtn.Size = new System.Drawing.Size(94, 29);
             this.compileBtn.TabIndex = 1;
@@ -59,7 +58,7 @@ namespace Scanner
             // 
             // browseBtn
             // 
-            this.browseBtn.Location = new System.Drawing.Point(866, 113);
+            this.browseBtn.Location = new System.Drawing.Point(1664, 111);
             this.browseBtn.Name = "browseBtn";
             this.browseBtn.Size = new System.Drawing.Size(94, 29);
             this.browseBtn.TabIndex = 2;
@@ -69,7 +68,7 @@ namespace Scanner
             // 
             // newBtn
             // 
-            this.newBtn.Location = new System.Drawing.Point(866, 23);
+            this.newBtn.Location = new System.Drawing.Point(1664, 21);
             this.newBtn.Name = "newBtn";
             this.newBtn.Size = new System.Drawing.Size(94, 29);
             this.newBtn.TabIndex = 3;
@@ -79,7 +78,7 @@ namespace Scanner
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(866, 160);
+            this.saveBtn.Location = new System.Drawing.Point(1664, 158);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(94, 29);
             this.saveBtn.TabIndex = 4;
@@ -89,6 +88,9 @@ namespace Scanner
             // 
             // fastColoredTextBox1
             // 
+            this.fastColoredTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fastColoredTextBox1.AutoCompleteBracketsList = new char[] {
         '(',
         ')',
@@ -109,14 +111,15 @@ namespace Scanner
             this.fastColoredTextBox1.CharWidth = 10;
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fastColoredTextBox1.IsReplaceMode = false;
-            this.fastColoredTextBox1.Location = new System.Drawing.Point(14, 9);
+            this.fastColoredTextBox1.Location = new System.Drawing.Point(1, 1);
             this.fastColoredTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fastColoredTextBox1.Name = "fastColoredTextBox1";
             this.fastColoredTextBox1.Paddings = new System.Windows.Forms.Padding(0);
             this.fastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.fastColoredTextBox1.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("fastColoredTextBox1.ServiceColors")));
-            this.fastColoredTextBox1.Size = new System.Drawing.Size(803, 525);
+            this.fastColoredTextBox1.Size = new System.Drawing.Size(1606, 936);
             this.fastColoredTextBox1.TabIndex = 5;
             this.fastColoredTextBox1.Zoom = 100;
             this.fastColoredTextBox1.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.fastColoredTextBox1_TextChanged);
@@ -158,21 +161,13 @@ namespace Scanner
             // 
             // commentBtm
             // 
-            this.commentBtm.Location = new System.Drawing.Point(866, 245);
+            this.commentBtm.Location = new System.Drawing.Point(1653, 242);
             this.commentBtm.Name = "commentBtm";
-            this.commentBtm.Size = new System.Drawing.Size(94, 29);
+            this.commentBtm.Size = new System.Drawing.Size(105, 29);
             this.commentBtm.TabIndex = 6;
-            this.commentBtm.Text = "comment";
+            this.commentBtm.Text = "un/comment";
             this.commentBtm.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(866, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "uncomment";
-            this.button2.UseVisualStyleBackColor = true;
+            this.commentBtm.Click += new System.EventHandler(this.commentBtm_Click);
             // 
             // Form1
             // 
@@ -180,14 +175,13 @@ namespace Scanner
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(20)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(998, 547);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1788, 937);
             this.Controls.Add(this.commentBtm);
-            this.Controls.Add(this.fastColoredTextBox1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.newBtn);
             this.Controls.Add(this.browseBtn);
             this.Controls.Add(this.compileBtn);
+            this.Controls.Add(this.fastColoredTextBox1);
             this.Name = "Form1";
             this.Text = "Notepad";
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).EndInit();
@@ -206,7 +200,6 @@ namespace Scanner
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button commentBtm;
-        private System.Windows.Forms.Button button2;
     }
 }
 

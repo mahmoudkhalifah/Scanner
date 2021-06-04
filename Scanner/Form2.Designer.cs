@@ -43,11 +43,12 @@ namespace Scanner
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(226, 38);
+            this.label1.Location = new System.Drawing.Point(258, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 32);
+            this.label1.Size = new System.Drawing.Size(218, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Scanner Output";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // listView1
             // 
@@ -58,9 +59,10 @@ namespace Scanner
             this.columnHeader4,
             this.columnHeader5});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(51, 113);
+            this.listView1.Location = new System.Drawing.Point(58, 151);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(552, 257);
+            this.listView1.Size = new System.Drawing.Size(630, 341);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -92,11 +94,12 @@ namespace Scanner
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 450);
+            this.ClientSize = new System.Drawing.Size(731, 600);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);

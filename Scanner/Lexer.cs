@@ -1,6 +1,5 @@
 ﻿namespace Scanner
 {
-	using dictionary;
 	using System;
 	using System.IO;
 

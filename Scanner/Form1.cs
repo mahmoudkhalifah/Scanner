@@ -1,5 +1,4 @@
-﻿using dictionary;
-using FastColoredTextBoxNS;
+﻿using FastColoredTextBoxNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +16,7 @@ namespace Scanner
 {
     public partial class Form1 : Form
     {
-        public static int size;
+        Dictionary_ table = Dictionary_.GetInstance();
         public static string[] lineNo2 = new string[1000];
         public static string[] lexeme2 = new string[1000];
         public static string[] ReturnToken2 = new string[1000];
@@ -28,35 +27,64 @@ namespace Scanner
         {
             Filter="txt files (*.txt)|*.txt",
         };
+        
 
         string code = "";
 
         public Form1()
         {
             InitializeComponent();
+            
         }
-
+        FastColoredTextBoxNS.Range range;
+        int lineNo=0;
         private void compileBtn_Click(object sender, EventArgs e)
         {
+            
+            Style ErrorStyle = new TextStyle(Brushes.Red, null, FontStyle.Regular);
+            Style DefaultStyle = new TextStyle(Brushes.Black, null, FontStyle.Regular);
+            //fastColoredTextBox1.SelectAll();
+            //fastColoredTextBox1.Selection.SetStyle(DefaultStyle);
+            //fastColoredTextBox1.ClearStylesBuffer();
+            //if (range != null)
+            //{
+            //    range.SetStyle(DefaultStyle);
+            //    System.Diagnostics.Debug.WriteLine("hi"+range);
+            //}
+                
+            
             code = fastColoredTextBox1.Text;
-            Dictionary_ table = new Dictionary_();
+            
             lexer.Tokinize(code, table);
-            size = table.length();
             lineNo2 = table.get("lineNo");
             lexeme2 = table.get("lexeme");
             ReturnToken2 = table.get("ReturnToken");
             lexemeNoInLine2 = table.get("lexemeNoInLine");
             matchability2 = table.get("matchability");
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
-            /*for (int i = 0; i < lineNo2.Length; i++)
+            int i = 0;
+            
+            while (lineNo2[i]!=null)
             {
                 if (ReturnToken2[i] == "Error")
                 {
-                    int x = int.Parse(lineNo2[i]);
-                    System.Diagnostics.Debug.WriteLine(fastColoredTextBox1.GetLineText(x-1));
+                    lineNo = int.Parse(lineNo2[i]);
+                    range = fastColoredTextBox1.GetLine(lineNo - 1);
+                    range.SetStyle(ErrorStyle);
+                    while (lineNo2[i] != null && int.Parse(lineNo2[i]) == lineNo)
+                        i++;
                 }
-            }*/
+                //else
+                //{
+                //    lineNo = int.Parse(lineNo2[i]);
+                //    range = fastColoredTextBox1.GetLine(lineNo - 1);
+                //    range.SetStyle(DefaultStyle);
+                //}
+                i++;
+            }
+            table.clearAll();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
@@ -67,14 +95,13 @@ namespace Scanner
                 code = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(code);
                 sr.Close();
-                Dictionary_ table = new Dictionary_();
                 lexer.Tokinize(code, table);
-                size = table.length();
                 lineNo2 = table.get("lineNo");
                 lexeme2 = table.get("lexeme");
                 ReturnToken2 = table.get("ReturnToken");
                 lexemeNoInLine2 = table.get("lexemeNoInLine");
                 matchability2 = table.get("matchability");
+                table.clearAll();
                 Form2 f2 = new Form2();
                 f2.ShowDialog();
             }
@@ -109,7 +136,6 @@ namespace Scanner
 
         private void fastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
         {
-     
 
         }
 

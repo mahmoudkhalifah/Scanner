@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dictionary
+namespace Scanner
 {
     public class Dictionary_
     {
@@ -16,15 +16,23 @@ namespace dictionary
         static int counter5 = 0;
         EnvironmentVariableTarget i;
         // Instance Variables
-        string[] lineNo = new string[100];
-        string[] lexeme = new string[100];
-        string[] ReturnToken = new string[100];
-        string[] matchability = new string[100];
-        string[] lexemeNoInLine = new string[100];
+        static string[] lineNo = new string[1000];
+        static string[] lexeme = new string[1000];
+        static string[] ReturnToken = new string[1000];
+        static string[] matchability = new string[1000];
+        static string[] lexemeNoInLine = new string[1000];
 
         // Constructor Declaration of Class
-
-
+        private Dictionary_() { }
+        private static Dictionary_ _instance;
+        public static Dictionary_ GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new Dictionary_();
+            }
+            return _instance;
+        }
         public void add(string key, dynamic value)
         {
             foreach (string item in s_output)
@@ -47,12 +55,17 @@ namespace dictionary
 
         public void clearAll()
         {
-            Array.Clear(lineNo, 0, lineNo.Length);
-            Array.Clear(lexeme, 0, lexeme.Length);
-            Array.Clear(ReturnToken, 0, ReturnToken.Length);
-            Array.Clear(lexemeNoInLine, 0, lexemeNoInLine.Length);
-            Array.Clear(matchability, 0, matchability.Length);
 
+            lineNo = new string[1000];
+            lexeme = new string[1000];
+            ReturnToken = new string[1000];
+            lexemeNoInLine = new string[1000];
+            matchability = new string[1000];
+            counter1 = 0;
+            counter2 = 0;
+            counter3 = 0;
+            counter4 = 0;
+            counter5 = 0;
         }
         public string[] get(string key)
         {
@@ -68,10 +81,7 @@ namespace dictionary
                 return matchability;
         }
 
-        public int length()
-        {
-            return lineNo.Length;
-        }
+
     }
 }
 

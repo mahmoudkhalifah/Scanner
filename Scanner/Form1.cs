@@ -49,14 +49,14 @@ namespace Scanner
             matchability2 = table.get("matchability");
             Form2 f2 = new Form2();
             f2.ShowDialog();
-            for (int i = 0; i < lineNo2.Length; i++)
+            /*for (int i = 0; i < lineNo2.Length; i++)
             {
                 if (ReturnToken2[i] == "Error")
                 {
                     int x = int.Parse(lineNo2[i]);
                     System.Diagnostics.Debug.WriteLine(fastColoredTextBox1.GetLineText(x-1));
                 }
-            }
+            }*/
         }
 
         private void browseBtn_Click(object sender, EventArgs e)

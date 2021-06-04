@@ -48,7 +48,7 @@ namespace Scanner
             // 
             // compileBtn
             // 
-            this.compileBtn.Location = new System.Drawing.Point(1664, 66);
+            this.compileBtn.Location = new System.Drawing.Point(1077, 86);
             this.compileBtn.Name = "compileBtn";
             this.compileBtn.Size = new System.Drawing.Size(94, 29);
             this.compileBtn.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace Scanner
             // 
             // browseBtn
             // 
-            this.browseBtn.Location = new System.Drawing.Point(1664, 111);
+            this.browseBtn.Location = new System.Drawing.Point(1077, 131);
             this.browseBtn.Name = "browseBtn";
             this.browseBtn.Size = new System.Drawing.Size(94, 29);
             this.browseBtn.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace Scanner
             // 
             // newBtn
             // 
-            this.newBtn.Location = new System.Drawing.Point(1664, 21);
+            this.newBtn.Location = new System.Drawing.Point(1077, 41);
             this.newBtn.Name = "newBtn";
             this.newBtn.Size = new System.Drawing.Size(94, 29);
             this.newBtn.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace Scanner
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(1664, 158);
+            this.saveBtn.Location = new System.Drawing.Point(1077, 178);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(94, 29);
             this.saveBtn.TabIndex = 4;
@@ -111,6 +111,7 @@ namespace Scanner
             this.fastColoredTextBox1.CharWidth = 10;
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Location = new System.Drawing.Point(1, 1);
             this.fastColoredTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -118,7 +119,7 @@ namespace Scanner
             this.fastColoredTextBox1.Paddings = new System.Windows.Forms.Padding(0);
             this.fastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.fastColoredTextBox1.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("fastColoredTextBox1.ServiceColors")));
-            this.fastColoredTextBox1.Size = new System.Drawing.Size(1612, 936);
+            this.fastColoredTextBox1.Size = new System.Drawing.Size(1013, 688);
             this.fastColoredTextBox1.TabIndex = 5;
             this.fastColoredTextBox1.Zoom = 100;
             this.fastColoredTextBox1.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.fastColoredTextBox1_TextChanged);
@@ -160,7 +161,7 @@ namespace Scanner
             // 
             // commentBtm
             // 
-            this.commentBtm.Location = new System.Drawing.Point(1653, 242);
+            this.commentBtm.Location = new System.Drawing.Point(1066, 262);
             this.commentBtm.Name = "commentBtm";
             this.commentBtm.Size = new System.Drawing.Size(105, 29);
             this.commentBtm.TabIndex = 6;
@@ -174,7 +175,7 @@ namespace Scanner
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(20)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1788, 937);
+            this.ClientSize = new System.Drawing.Size(1199, 689);
             this.Controls.Add(this.commentBtm);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.newBtn);

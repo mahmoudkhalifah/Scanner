@@ -315,6 +315,16 @@
 							{
 								IncreaseLexemeNo();
 								addLexeme(_lineNo, c+"", IsSymbol(c+""), _lexemeNo, "matched");
+								if (IsSymbol(c+"") == "Quotation Mark")
+								{
+									if (c+"" == "'")
+									{
+										while (Current != '\'' && !IsEndOfFile())
+											Next();
+									}
+									else while (Current != '\"' && !IsEndOfFile())
+											Next();
+								}
 							}
 						}
                     }

@@ -68,7 +68,11 @@ namespace Scanner
                 if (ReturnToken2[i] == "Error")
                 {
                     lineNo = int.Parse(lineNo2[i]);
-                    range = fastColoredTextBox1.GetLine(lineNo - 1);
+                    try
+                    {
+                        range = fastColoredTextBox1.GetLine(lineNo - 1);
+                    }
+                    catch { }
                     range.SetStyle(ErrorStyle);
                     while (lineNo2[i] != null && int.Parse(lineNo2[i]) == lineNo)
                         i++;
